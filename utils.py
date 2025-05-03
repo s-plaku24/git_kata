@@ -7,7 +7,7 @@ def load_data():
     return df[df['sex'] == 'male']
 
 def clean_data(df):
-    """Cleans the DataFrame by dropping rows with missing values and converting categorical columns to lowercase."""
+    """ Cleans the DataFrame by dropping rows with missing values and converting categorical columns to lowercase. """
     df = df.dropna()
 
     categorical_columns = df.select_dtypes(include=['object']).columns
