@@ -8,7 +8,7 @@ def load_data():
 
 def clean_data(df):
     """ Cleans the DataFrame by dropping rows with missing values and converting categorical columns to lowercase. """
-    """df = df.dropna()"""
+    "df = df.dropna()" # Drop rows with missing values, if we dont comment this out then dataframe will be empty
 
     categorical_columns = df.select_dtypes(include=['object']).columns
     for col in categorical_columns:
